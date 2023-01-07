@@ -16,4 +16,7 @@ def create_app(config=None):
         
         return status, 200
     
+    from .dashboard import dashboard
+    app.register_blueprint(dashboard)
+    
     return app
